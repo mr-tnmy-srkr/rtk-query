@@ -5,16 +5,22 @@ import {
 } from "react-router-dom";
 import App from "../App";
 import ErrorPage from "../page/ErrorPage";
-import Feed from "../page/Feed";
-import Rtk from "../page/Rtk";
+import Query from "../page/Query";
+import Mutation from "../page/Mutation";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorPage />}>
-      <Route index element={<Feed />} />
+      {/* <Route index element={<App />} /> */}
       <Route
-        path="rtk-query"
-        element={<Rtk />}
+        path="query"
+        element={<Query />}
+        //   loader={contactLoader}
+        //   action={contactAction}
+      />
+      <Route
+        path="mutation"
+        element={<Mutation />}
         //   loader={contactLoader}
         //   action={contactAction}
       />
